@@ -5,7 +5,7 @@ const App = () => {
 
 
   return (
-    <div className='flex flex-col gap-4 justify-center items-center'>
+    <div className='max-w-sm mx-auto bg-slate-200 h-screen'>
 
       <Quiz />
 

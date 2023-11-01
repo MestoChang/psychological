@@ -6,19 +6,19 @@ const quizData = [
         options: [
             {
                 text: 'A',
-                score: 5
+                score: 0
             },
             {
                 text: 'B',
-                score: 10
+                score: 5
             },
             {
                 text: 'C',
-                score: 15
+                score: 10
             },
             {
                 text: 'D',
-                score: 5
+                score: 15
             },
         ],
     },
@@ -28,19 +28,19 @@ const quizData = [
         options: [
             {
                 text: 'E',
-                score: 5
+                score: 0
             },
             {
                 text: 'F',
-                score: 10
+                score: 5
             },
             {
                 text: 'G',
-                score: 15
+                score: 10
             },
             {
                 text: 'H',
-                score: 5
+                score: 15
             },
         ],
     },
@@ -50,11 +50,11 @@ const quizData = [
         options: [
             {
                 text: 'I',
-                score: 10
+                score: 0
             },
             {
                 text: 'J',
-                score: 15
+                score: 5
             },
             {
                 text: 'K',
@@ -62,7 +62,7 @@ const quizData = [
             },
             {
                 text: 'L',
-                score: 5
+                score: 15
             },
         ],
     },
@@ -72,19 +72,19 @@ const quizData = [
         options: [
             {
                 text: 'M',
-                score: 15
+                score: 0
             },
             {
                 text: 'N',
-                score: 10
-            },
-            {
-                text: 'O',
                 score: 5
             },
             {
-                text: 'P',
+                text: 'O',
                 score: 10
+            },
+            {
+                text: 'P',
+                score: 15
             },
         ],
     },
@@ -94,11 +94,11 @@ const quizData = [
         options: [
             {
                 text: 'Q',
-                score: 10
+                score: 0
             },
             {
                 text: 'R',
-                score: 15
+                score: 5
             },
             {
                 text: 'S',
@@ -106,7 +106,7 @@ const quizData = [
             },
             {
                 text: 'T',
-                score: 5
+                score: 15
             },
         ],
     },
