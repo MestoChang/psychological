@@ -79,7 +79,7 @@ const Quiz = () => {
             {isTestStarted ? (
                 showResult ? (
                     // Result
-                    <div className='bg-slate-100 h-screen w-screen p-6'>
+                    <div className='bg-slate-100 p-6'>
                         <p>Total Score: {totalScore}</p>
                         <p>Result:</p>
 
