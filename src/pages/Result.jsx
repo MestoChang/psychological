@@ -13,8 +13,10 @@ const Result = ({ totalScore }) => {
                     {resultData[index].title}
                 </h3>
                 <div className='flex flex-col gap-2'>
-                    {resultData[index].description.map(p => (
-                        <p>{p}</p>
+                    {resultData[index].description.map((p, index) => (
+                        <p key={index}>
+                            {p}
+                        </p>
                     ))}
                 </div>
                 <div>
@@ -45,7 +47,7 @@ const Result = ({ totalScore }) => {
     }
 
     return (
-        <div>
+        <div className='h-fit'>
             <p>Total Score: {totalScore}</p>
             {renderResult()}
         </div>

@@ -55,7 +55,7 @@ const Quiz = () => {
                 // Result or Quiz
                 showResult ? (
                     // Result
-                    <div className='bg-slate-100 p-6 w-full h-full flex flex-col items-center justify-center'>
+                    <div className='bg-slate-100 p-6 w-full flex flex-col items-center justify-center'>
 
                         <Result totalScore={totalScore} />
 
