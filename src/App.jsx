@@ -6,7 +6,7 @@ const App = () => {
 
 
   return (
-    <div className='max-w-sm mx-auto bg-slate-200 h-screen'>
+    <div className='max-w-xl mx-auto bg-slate-200 h-screen'>
 
       <Quiz />
 

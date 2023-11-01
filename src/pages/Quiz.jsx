@@ -47,36 +47,39 @@ const Quiz = () => {
 
 
     return (
-        <div className="flex flex-col items-center bg-white h-screen">
+        <div className="flex flex-col items-center bg-white min-h-screen">
 
-            {/* Result or Quiz */}
+            {/* Start or not */}
             {isTestStarted ? (
+
+                // Result or Quiz
                 showResult ? (
                     // Result
-                    <div className='bg-slate-100 p-6'>
+                    <div className='bg-slate-100 p-6 w-full h-full flex flex-col items-center justify-center'>
 
                         <Result totalScore={totalScore} />
 
-                        <div className='my-4'>
+                        <div className='my-6 w-full flex justify-center'>
                             {isTestCompleted ? (
-                                <Button secondary onClick={handleRetakeTest}>
+                                <Button secondary
+                                    onClick={handleRetakeTest}
+                                    className="flex w-1/2 justify-center">
                                     再測一次
                                 </Button>
                             ) : null}
                         </div>
                     </div>
-
                 ) : (
                     // Quiz
-                    <div className="mt-4 flex flex-col gap-4 p-6">
-                        <h2>
+                    <div className="mt-4 flex flex-col gap-4 p-6 w-full">
+                        <h2 className='text-xl font-bold'>
                             {quizData[currentQuestion].title}
                         </h2>
                         <p>
                             {quizData[currentQuestion].question}
                         </p>
 
-                        <ul className="flex flex-col gap-4">
+                        <ul className="flex flex-col gap-4 my-6">
                             {
                                 quizData[currentQuestion].options.map((option) => (
                                     <li
@@ -89,12 +92,12 @@ const Quiz = () => {
                                 ))
                             }
                         </ul>
-
                     </div>
                 )) : (
                 // start
                 <Start onClick={handleStartTest} />
             )}
+
         </div>
     );
 };

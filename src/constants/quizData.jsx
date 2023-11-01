@@ -1,4 +1,4 @@
-// src/quizData.js
+
 const quizData = [
     {
         title: "Question_1",
