@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+    @apply px-3 py-1.5 text-sm font-semibold flex items-center gap-1 rounded w-fit ease-in-out duration-200 shadow-sm hover:shadow-md hover:opacity-80 hover:-translate-y-0.5;
+}
+
+.primary-btn {
+    @apply bg-sky-600 text-white;
+}
+
+.primary-outline-btn {
+    @apply  text-sky-600 ring-1 ring-inset ring-sky-600;
+}
+
+.secondary-btn {
+    @apply bg-gray-700 text-white;
+}
+
+.secondary-outline-btn {
+    @apply text-gray-700 ring-1 ring-inset ring-gray-500;
+}
+
+.success-btn {
+    @apply bg-green-700 text-white;
+}
+
+.success-outline-btn {
+    @apply  text-green-700 ring-1 ring-inset ring-green-700;
+}
+
+.warning-btn {
+    @apply bg-orange-600 text-white ;
+}
+
+.warning-outline-btn {
+    @apply  text-orange-600 ring-1 ring-inset ring-orange-600;
+}
+
+.danger-btn {
+    @apply bg-red-600 text-white;
+}
+
+.danger-outline-btn {
+    @apply  text-red-600 ring-1 ring-inset ring-red-600;
+}
+
+
+
