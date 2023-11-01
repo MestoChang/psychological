@@ -47,7 +47,7 @@ const Quiz = () => {
 
 
     return (
-        <div className="flex flex-col items-center bg-white min-h-screen">
+        <div className="flex flex-col items-center min-h-screen">
 
             {/* Start or not */}
             {isTestStarted ? (
@@ -55,7 +55,7 @@ const Quiz = () => {
                 // Result or Quiz
                 showResult ? (
                     // Result
-                    <div className='bg-slate-100 p-6 w-full flex flex-col items-center justify-center'>
+                    <div className='bg-slate-100 p-6 w-full flex flex-col items-center justify-center '>
 
                         <Result totalScore={totalScore} />
 

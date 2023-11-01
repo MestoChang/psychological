@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import { Quiz } from './pages';
+import { BG } from './asset';
 
 
 const App = () => {
 
 
   return (
-    <div className='max-w-xl mx-auto bg-slate-200 min-h-screen'>
+    <div className='relative max-w-xl mx-auto min-h-screen bg-slate-100'>
 
-      <Quiz />
+      <div className='z-10 absolute top-0 inset-x-0'>
+        <Quiz />
+      </div>
+
+      <div className='z-0 opacity-50'>
+        <img src={BG} className='object-fill' />
+      </div>
+
 
     </div>
   )
