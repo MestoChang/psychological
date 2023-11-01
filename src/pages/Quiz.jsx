@@ -1,9 +1,8 @@
 // src/Quiz.js
 import React, { useState } from 'react';
 import quizData from '../constants/quizData';
-import Button from './Button';
-import Start from './Start';
-import Result from './Result';
+import Button from '../components/Button';
+import { Start, Result } from '../pages';
 
 const Quiz = () => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -47,31 +46,6 @@ const Quiz = () => {
     };
 
 
-    // 判斷結果
-    const renderResult = () => {
-        if (totalScore < 10) {
-            console.log('show img 1');
-            return (
-                <p> AAA </p>
-            )
-        } else if (totalScore >= 10 && totalScore < 20) {
-            console.log('show img 2');
-            return (
-                <p> BBB </p>
-            )
-        } else if (totalScore >= 20 && totalScore < 30) {
-            console.log('show img 3');
-            return (
-                <p> CCC </p>
-            )
-        } else {
-            console.log('show img 4');
-            return (
-                <p> DDD </p>
-            )
-        }
-    }
-
     return (
         <div className="flex flex-col items-center bg-white h-screen">
 
@@ -80,12 +54,8 @@ const Quiz = () => {
                 showResult ? (
                     // Result
                     <div className='bg-slate-100 p-6'>
-                        <p>Total Score: {totalScore}</p>
-                        <p>Result:</p>
 
-                        <div>
-                            {renderResult()}
-                        </div>
+                        <Result totalScore={totalScore} />
 
                         <div className='my-4'>
                             {isTestCompleted ? (
@@ -94,8 +64,8 @@ const Quiz = () => {
                                 </Button>
                             ) : null}
                         </div>
-
                     </div>
+
                 ) : (
                     // Quiz
                     <div className="mt-4 flex flex-col gap-4 p-6">
