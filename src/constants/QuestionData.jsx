@@ -1,4 +1,4 @@
-const Questions = [
+const QuestionData = [
     {
         id: 7001,
         title: "Question_1",
@@ -115,4 +115,4 @@ const Questions = [
 
 
 
-export default Questions;
+export default QuestionData;

@@ -1,51 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
+import Question from './Question';
 
+const Slides = ({ data }) => {
 
-const Slides = ({question, onChange, value}) => {
+    // console.log(data);
 
-    console.log('origin value:', value);
-
-    const handleSelect = (answer) => {
-        console.log('answerValue', answer.value);
-        value = answer.value;
-        return value;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const nextSlide = () => {
+        if (currentIndex < data.length - 1) {
+            setCurrentIndex(currentIndex + 1);
+        } else { // 之後改成無法再倒退
+            setCurrentIndex(0);
+            console.log('return to first');
+        }
+    };
+    const prevSlide = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+        } else { // 之後改成跳轉至結果
+            setCurrentIndex(data.length - 1);
+            console.log('back to last slide');
+        }
     }
 
-    const handleSubmit = () => {
-        console.log('current value', value);
-        onChange(value);
-    }
 
     return (
-        <div className='flex flex-col gap-3 justify-center items-center p-4'>
+        <div className='bg-white shadow-lg max-w-sm rounded-lg overflow-hidden p-4'>
 
-            <h3>
-                {question.title}
-            </h3>
+            <div>
 
-            <p>
-                {question.question}
-            </p>
+                {/* render question */}
+                {data.map((question, index) => (
+                    <Question
+                        key={question.id}
+                        question={question}
+                        index={index}
+                        currentIndex={currentIndex} />
+                ))}
 
-            <ul className='space-y-2'>
-                {question.answers.map((answer, index) => {
-                    return(
-                    <li key={index}
-                        onClick={() => handleSelect(answer)}
-                        className='cursor-pointer p-2 border rounded'>
-                        {answer.label}
-                    </li>
-                    )
-                })}
-            </ul>
+            </div>
 
-            <div className='flex gap-2'>
-                <Button secondary>Back</Button>
-                <Button primary onClick={() => handleSubmit()}>Next</Button>
+            <div className='flex gap-2 justify-center mt-4'>
+                <Button secondary onClick={prevSlide}>
+                    Back
+                </Button>
+                <Button primary onClick={nextSlide}>
+                    Next
+                </Button>
             </div>
 
         </div>
+
     )
 }
 
