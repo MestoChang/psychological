@@ -33,7 +33,7 @@ const Result = ({ totalScore }) => {
                                 </p>
                             ))}
 
-                            <Button primary onClick={toggleImage} className="mt-6 flex justify-center w-1/2">
+                            <Button primary onClick={toggleImage} className="mt-6 flex justify-center w-full md:w-1/2">
                                 顯示圖片
                             </Button>
 
